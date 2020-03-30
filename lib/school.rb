@@ -18,9 +18,11 @@ class School
   end
   
   def sort
-    roster.map do |grade, name|
-      name.sort
+    new_roster = {}
+    roster.map do |grade,student|
+        new_roster[grade] = student.sort
     end
+    new_roster
   end
   
   
